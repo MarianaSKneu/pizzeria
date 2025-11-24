@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alvin's Pizza Order</title>
+        <link rel="stylesheet" href="pizzeria.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+
+        <script src="https://kit.fontawesome.com/b2f6e7022f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- overlay for mobile -->
+        <div id="overlay">
+            <div>
+                <i class="fa fa-times" title="button to close mobile navigation" onclick="off()"></i>
+            </div>
+            <div class="overlay-text">
+                <a href="pizzeria.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="order.html" class="order-nav">Order</a>
+            </div>
+        </div>
+        <header>
+            <nav class="nav full-nav">
+                <div>
+                    <img src="images_pizza/pizza_logo3.png" alt="logo" style="width: 10%;" loading="lazy">
+                </div>
+                <div>
+                    <a href="pizzeria.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    <a href="order.html" class="order-nav">Order</a>
+                </div>
+            </nav>
+
+            <!-- mobile -->
+            <!-- title in i - for screen reader -->
+            <nav class="nav mobile-nav">
+                <div>
+                    <img src="images_pizza/pizza_logo3.png" alt="logo" style="width: 10%;"  loading="lazy">
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars" title="button to open navigation" onclick="on()"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="red-spacer"></div>
+    
+            <!-- form -->
+            <div>
+                <h1>Order</h1>
+                <div class="order">
+                    <form>
+                        <div class="form1">
+                            <div>
+                                <h3>Alvin's Pizzeria</h3>
+                                <h3>231979 Austin, TX</h3>
+                                <div>
+                                    <input type="radio" id="pickup" name="pick" value="1">
+                                    <label for="pickup">Pickup</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="dine-in" name="pick" value="1">
+                                    <label for="dine-in">Dine-in</label>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Order Details</h3>
+                                <div id="orderDetails"></div>
+                            </div>
+                        </div>
+                        <hr class="form-hr">
+                        <div class="form-input">
+                            <h3>Info</h3>
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" placeholder="John Smith">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="johnsmith@gmail.com">
+                                <label for="phone">Phone number:</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="123-456-7890">
+                            </div>
+    
+                        </div>
+                        <hr class="form-hr">
+                        <div class="form-input">
+                            <h3>Payment</h3>
+                            <div>
+                                <label for="cardname">Carholder Name:</label>
+                                <input type="text" id="cardname" name="cardname" placeholder="John Smith">
+                                <label for="address">Cardholder Address</label>
+                                <input type="text" id="address" name="address" placeholder="johnsmith@gmail.com">
+                                <label for="card">Card number:</label>
+                                <input type="number" id="card" name="card" placeholder="4111 1111 1111 1111">
+                                <label for="cvv">CVV:</label>
+                                <input type="number" id="cvv" name="cvv" placeholder="411">
+                            </div>
+                        </div>
+                        <div class="form-btn">
+                            <button type="reset" value="Reset">Cancel</button>
+                            <button type="submit" value="Submit">Submit</button>
+                        </div>
+                    </form>
+    
+                </div>
+            </div>
+    
+        </main>
+
+        <footer>
+            <div>
+                <img src="images_pizza/pizza_logo3.png" alt="logo" style="width: 20%;" loading="lazy">
+            </div>
+            <div>
+                <div>
+                    <a href="pizzeria.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    <a href="order.html">Order</a>
+                </div>
+                <div>
+                    <h4>Copyright 2023 Alvin's Pizzeria</h4>
+                </div>
+            </div>
+            <div>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            
+        </footer>
+
+
+        <script src="pizzeria.js" defer></script>
+        <!-- defer - means load all html, then load all js -->
+    </body>
+</html>

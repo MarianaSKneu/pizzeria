@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alvin's Pizza</title>
+        <link rel="stylesheet" href="pizzeria.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/b2f6e7022f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- overlay for mobile -->
+        <div id="overlay">
+            <div>
+                <i class="fa fa-times" title="button to close mobile navigation" onclick="off()"></i>
+            </div>
+            <div class="overlay-text">
+                <a href="pizzeria.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="order.html" class="order-nav">Order</a>
+            </div>
+        </div>
+        <header>
+            <nav class="nav full-nav">
+                <div>
+                    <img src="images_pizza/pizza_logo3.png" alt="logo" style="width: 10%;" loading="lazy">
+                </div>
+                <div>
+                    <a href="pizzeria.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    <a href="order.html" class="order-nav">Order</a>
+                </div>
+            </nav>
+
+            <!-- mobile -->
+            <!-- title in i - for screen reader -->
+            <nav class="nav mobile-nav">
+                <div>
+                    <img src="images_pizza/pizza_logo3.png" alt="logo" style="width: 10%;"  loading="lazy">
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars" title="button to open navigation" onclick="on()"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero-container">
+                <img src="images_pizza/hawain-pizza.png" alt="hawain pizza as a background" loading="lazy" class="hero-image">
+                <div class="hero-text">
+                    <h1>Alvin's Pizzeria</h1>
+                    <a href="order.html" class="hero-btn">Order</a>
+                </div>
+            </div>
+            <div class="red-spacer"></div>
+
+            <!-- pizza grid-->
+            <div class="pizzas">
+                <h2>Pizza Favourites</h2>
+                <div class="pizza-grid">
+
+                    <div class="pizza-child" data-pizza-id="1">
+                        <!-- data-pizza-id - custom atribute-->
+
+                        <h4>Papperoni pizza $14.00</h4>
+                        <h3>$14.00</h3>
+
+                        <img src="images_pizza/paperoni-pizza.png" alt="papperoni pizza" loading="lazy" style="width: 100%;">
+                        <button class="add-to-cart">Add to Cart</button>
+
+                        <div class="add-selected">
+                            <button class="minusBtn"><i class="fa-solid fa-minus"></i></button>
+                            <h4 class="counter">0</h4>
+                            <button class="plusBtn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="pizza-child" data-pizza-id="2">
+                        <h4>Italian pizza $14.00</h4>
+                        <h3>$14.00</h3>
+                        <img src="images_pizza/italian-pizza.png" alt="papperoni pizza" loading="lazy" style="width: 100%;">
+                        <button class="add-to-cart">Add to Cart</button>
+
+                        <div class="add-selected">
+                            <button class="minusBtn"><i class="fa-solid fa-minus"></i></button>
+                            <h4 class="counter">0</h4>
+                            <button class="plusBtn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="pizza-child" data-pizza-id="3">
+                        <h4>Italian with eggs pizza $14.00</h4>
+                        <h3>$14.00</h3>
+                        <img src="images_pizza/italian-eggs-pizza.png" alt="papperoni pizza" loading="lazy" style="width: 100%;">
+                        <button class="add-to-cart">Add to Cart</button>
+
+                        <div class="add-selected">
+                            <button class="minusBtn"><i class="fa-solid fa-minus"></i></button>
+                            <h4 class="counter">0</h4>
+                            <button class="plusBtn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </main>
+
+
+        <footer>
+            <div>
+                <img src="images_pizza/pizza_logo3.png" alt="logo" style="width: 20%;" loading="lazy">
+            </div>
+            <div>
+                <div>
+                    <a href="pizzeria.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    <a href="order.html">Order</a>
+                </div>
+                <div>
+                    <h4>Copyright 2023 Alvin's Pizzeria</h4>
+                </div>
+            </div>
+            <div>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            
+        </footer>
+
+
+        <script src="pizzeria.js" defer></script>
+        <!-- defer - means load all html, then load all js -->
+    </body>
+</html>
